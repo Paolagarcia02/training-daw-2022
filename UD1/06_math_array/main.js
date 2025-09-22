@@ -6,9 +6,41 @@
 
 
 
+// La mediana del array
+// La moda del array
+
+
+const sumaDeTodosLosElementos = (arr) => {
+    return arr.reduce((acc, curr) => acc += curr, 0);
+}
+
+const numeroMasGrande = (arr) => {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+    }
+    return max;
+}
+
+const numeroMasPequeno = (arr) => {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] < min) {
+            min = arr[i];
+        }
+    return min;
+    }
+}
+
+const mediaDeElementos = (arr) => {
+    return sumaDeTodosLosElementos(arr) / arr.length;
+}
+
 function doCalculation(array) {
-
-
+    console.log("suma de los elementos: " + sumaDeTodosLosElementos(array));
+    console.log("numero mas grande: " + numeroMasGrande(array));
+    console.log("numero mas pequeno: " + numeroMasPequeno(array));
+    console.log("media de elementso: " + mediaDeElementos(array));
 }
 
 
